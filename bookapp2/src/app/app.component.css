@@ -1,0 +1,6 @@
+.content-body{
+    min-height: 100%;
+    padding: 60px 1rem;
+    background-image: url("https://images.unsplash.com/photo-1533669955142-6a73332af4db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+    display: block;
+}
