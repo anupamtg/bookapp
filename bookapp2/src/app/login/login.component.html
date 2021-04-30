@@ -5,6 +5,9 @@
         <P><font size="+1">Sign Into Your Account</font> </P>
       </div>
       <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+
+        
+
         <div class="emailInput">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email</mat-label>
@@ -37,11 +40,11 @@
           </mat-error>
         </mat-form-field>
         </div>
-        <button mat-flat-button color="primary">Login</button>
+        <button mat-flat-button class="full-width" color="primary">Login</button>
       </form>
 
       <div class="button-row">
-        <button mat-flat-button color="primary">Create New Account</button>
+        <a routerLink="/register" routerLinkActive="active"><button mat-button>Create New Account</button></a>
       </div>
     </mat-card-content>
   </mat-card>

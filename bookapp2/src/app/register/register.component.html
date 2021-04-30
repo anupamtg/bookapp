@@ -1,33 +1,75 @@
-<div class="d-flex align-items-center h-100">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-5">
-          <mat-card>
-            <h3 class="text-center">Register</h3>
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-              <mat-form-field class="w-100">
-                <input type="text" matInput placeholder="First Name" formControlName="firstname">
-                <mat-error *ngIf="data.firstname.errors?.required">First Name is required</mat-error>
-              </mat-form-field>
-              <mat-form-field class="w-100">
-                <input type="text" matInput placeholder="Last Name" formControlName="lastname">
-                <mat-error *ngIf="data.lastname.errors?.required">Last Name is required</mat-error>
-              </mat-form-field>
-              <mat-form-field class="w-100">
-                <input type="text" matInput placeholder="Username" formControlName="username">
-                <mat-error *ngIf="data.username.errors?.required">Username is required</mat-error>
-              </mat-form-field>
-              <mat-form-field class="w-100">
-                <input type="password" matInput placeholder="Password" formControlName="password">
-                <mat-error *ngIf="data.password.errors?.required">Password is required</mat-error>
-              </mat-form-field>
-              <div class="mt-4">
-                <button mat-raised-button color="primary">Register</button>
-                <a [routerLink]="['/login']" class="ml-2" mat-button color="primary">Cancel</a>
-              </div>
-            </form>
-          </mat-card>
-        </div>
-      </div>
+<mat-card style="background-color:rgb(250, 243, 243);   width:100%">
+  <mat-card-content>
+      
+    <div class="header">
+      <P><font size="+1">Create Your Account</font> </P>
     </div>
-  </div>
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+
+      <div class="emailInput">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Your Name</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Enter your name" required
+          />
+          <mat-error *ngIf="!loginForm.controls['email'].valid">
+              Email is required
+            </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="emailInput">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Enter email address" required
+          />
+          <mat-error *ngIf="!loginForm.controls['email'].valid">
+              Email is required
+            </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+                <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+          <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>
+              {{hide ? 'visibility_off' : 'visibility'}}
+          </mat-icon>
+      </button>
+      <mat-error *ngIf="!loginForm.controls['password'].valid">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="full-width" appearance="outline">
+  <mat-label>Confirm Password</mat-label>
+  <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required />
+  <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+  [attr.aria-pressed]="hide">
+  <mat-icon>
+      {{hide ? 'visibility_off' : 'visibility'}}
+  </mat-icon>
+</button>
+<mat-error *ngIf="!loginForm.controls['password'].valid">
+  Password is required
+</mat-error>
+</mat-form-field>
+</div>
+
+      <button mat-flat-button class="full-width" color="primary">SignUp</button>
+    </form>
+
+    
+  </mat-card-content>
+</mat-card>
+
