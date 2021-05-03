@@ -21,6 +21,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import{MatChipsModule}from '@angular/material/chips';
 import { SearchComponent } from './search/search.component';
+import { ViewComponent } from './view/view.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 
@@ -32,7 +35,8 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     RegisterComponent,
     ToolbarComponent,
-    SearchComponent
+    SearchComponent,
+    ViewComponent
     
     
     
@@ -53,7 +57,8 @@ import { SearchComponent } from './search/search.component';
      MatProgressBarModule,
      HttpClientModule,
      FormsModule,
-     MatChipsModule
+     MatChipsModule,
+     FlexLayoutModule
      
   ],
   providers: [],
