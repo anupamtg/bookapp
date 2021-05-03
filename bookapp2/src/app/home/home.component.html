@@ -1,26 +1,72 @@
-<mat-toolbar>
-    
-    <div class="heading">BookApp<br></div>
 
-
-    <img src="data:image/png;base64,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" width="40" height="40" class="d-inline-block align-top"
-            alt="App Logo">
-    <div class="example-button-row">
-        <a routerLink="/home" routerLinkActive="active"><button mat-button>Home</button></a>
-      <button mat-button>Favourites</button>
-      <button mat-button>Authors</button>
-      <button mat-button>Recommendations</button>
+        <div *ngIf="!loading" class="container-fluid hero-page1">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h1>Search books</h1>
+          <input
+            [formControl]="queryField"
+            id="keyword"
+            type="search"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </div>
     </div>
-      <div style = "position:absolute; right:60px;">
-        <a routerLink="/login" routerLinkActive="active"><button mat-button>Login/Register</button></a>
-        
-    </div>
-      
-   
+  </div>
   
-</mat-toolbar>
+  
+  <div *ngIf="loading" class="container-fluid mt-4">
+    <div class="container">
+      <div class="row justify-content-start align-items-start mb-5">
+        <div class="col-lg-12">
+          <!-- <form [formGroup]="addForm"> formControlName="keyword"  required-->
+          <input
+            class="form-control"
+            [formControl]="queryField"
+            type="search"
+            id="keyword"
+            placeholder="search"
+            typeahead-wait-ms="delay"
+            autocomplete="off"
+          />
+          <!-- </form> -->
+        </div>
+        <mat-card>
+        <div *ngIf="items" class="col-12 mt-5">
+          <div class="row justify-content-around">
+            <div
+              *ngFor="let product of items"
+              class="col-lg-3 col-md-6 col-sm-12 book-display"
+            >
+              <div class="image">
+                <img
+                  *ngIf="product.volumeInfo.imageLinks"
+                  src="{{ product.volumeInfo.imageLinks.thumbnail }}"
+                  alt=""
+                />
+              </div>
+              <div *ngFor="let aut of product.volumeInfo.authors">
+                <span> Authors: {{ aut }}</span>
+              </div>
+              <div class="details">
+                <span>Title: {{ product.volumeInfo.title }}</span> <br />
+                <br />
+                <button mat-flat-button   [routerLink]="['/search', combineSlug(product.id)]">Details</button>
+                <button mat-flat-button (click)="goToLink(product.volumeInfo.previewLink)">Preview</button>
+                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                  </button>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+    </mat-card>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
+  
